@@ -51,3 +51,52 @@ This project contains parts that are under the MIT License, originally written b
 MIT License
 
 Copyright (c) 2025 zakaria-effyis
+
+#  UI-01 — Streamlit Frontend for Identity Verification
+
+This branch (`UI-01`) contains the Streamlit web interface that interacts with the FastAPI backend defined in `fastapi-01`.
+
+The goal is to provide a **user-friendly web interface** where users can upload:
+- An image of an identity card
+- A selfie image
+
+Then, it will call the FastAPI `/verify_identity` endpoint and display:
+- Whether the person in the selfie matches the ID card
+-  Confidence score
+
+---
+
+##  How to Run the UI
+
+### 1. Make sure the FastAPI server is running
+
+Go to the `fastapi-01` directory and start the server:
+
+
+cd ../fastapi-01
+uvicorn app.main:app --reload
+You should see:
+Uvicorn running on http://127.0.0.1:8000
+This exposes the /verify_identity route used by the UI.
+
+### 2. Run the Streamlit app
+From the UI-01 directory:
+
+cd ../UI-01
+streamlit run app.py
+### 3. Interact via the Web UI
+Once the Streamlit app is running, your browser should open to:
+
+http://localhost:8501
+There, you can:
+
+Upload an ID card image  
+
+
+Upload a selfie image  
+
+
+Click  to launch verification  
+
+
+View the result (match or not + similarity score)
