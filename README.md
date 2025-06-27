@@ -51,3 +51,28 @@ This project contains parts that are under the MIT License, originally written b
 MIT License
 
 Copyright (c) 2025 zakaria-effyis
+
+# FASTAPI-03 – Verification of Entered Information
+
+This FastAPI module compares the **information entered by the user** (CIN, name, date of birth, expiration date) with the data automatically extracted via OCR from a **Moroccan identity card image**.
+
+---
+
+## How It Works
+
+- Upload an image file (`.jpg` / `.png`)
+- Extract text using EasyOCR + regex
+- Compare with the entered fields
+- Return a JSON response with `MATCH` or `MISMATCH`
+
+## Run the API
+
+
+pip install -r requirements.txt  
+
+uvicorn main:app --reload  
+
+
+  
+Access the Swagger documentation at: http://localhost:8000/docs
+
