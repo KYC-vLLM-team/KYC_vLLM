@@ -51,3 +51,36 @@ This project contains parts that are under the MIT License, originally written b
 MIT License
 
 Copyright (c) 2025 zakaria-effyis
+
+# ID Card Authenticity Detection (Notebook-02)
+
+This notebook uses a **convolutional autoencoder** to verify the **authenticity of an identity card image** by checking for anomalies. It is part of the **KYC_vLLM** project for secure and automated identity verification.
+
+##  Core Features
+
+- **Autoencoder Model** trained to reconstruct only real ID cards
+- **Anomaly Score** is computed as reconstruction error
+- Predicts whether an ID card is **real** or **fake**
+
+
+## Output
+
+- Displays original and reconstructed images side by side.
+- Shows anomaly score (MSE between input and reconstruction).
+- Highlights mismatches (likely fakes) with higher scores.
+  
+## Download the model from Google Drive
+
+The `autoencodeur_id.h5` model is hosted on Google Drive to avoid file size limits on GitHub.
+
+**Model Drive Link**:  
+[https://drive.google.com/file/d/1eVDLSSNFmbMIt0fs3Ntpqq4bnTqkpXxg/view?usp=sharing](https://drive.google.com/file/d/1eVDLSSNFmbMIt0fs3Ntpqq4bnTqkpXxg/view?usp=sharing)
+
+In the notebook, the following code downloads it automatically:
+
+```python
+import gdown
+file_id = "1eVDLSSNFmbMIt0fs3Ntpqq4bnTqkpXxg"
+gdown.download(f"https://drive.google.com/uc?id={file_id}", "autoencodeur_id.h5", quiet=False)
+
+ae = tf.keras.models.load_model("autoencodeur_id.h5", compile=False)
