@@ -51,3 +51,41 @@ This project contains parts that are under the MIT License, originally written b
 MIT License
 
 Copyright (c) 2025 zakaria-effyis
+
+# UI-03 – Identity Card Information Verification Interface
+
+This Streamlit interface allows the user to:
+- Upload a Moroccan ID card image
+- Enter expected info (CIN, full name, date of birth, expiry date)
+- Send everything to the `fastapi-03` API
+- Compare the extracted vs expected data (MATCH or MISMATCH)
+
+
+
+## Endpoint Used
+
+POST http://localhost:8000/verify-card-info
+
+
+
+## How to Run
+
+
+cd ui-03  
+
+python -m venv venv  
+
+venv\Scripts\activate         # On Windows  
+
+pip install -r requirements.txt  
+
+streamlit run app.py  
+
+
+## Note
+
+Make sure the `fastapi-03` backend is running at:  
+
+
+
+uvicorn main:app --reload --port 8000
