@@ -51,3 +51,48 @@ This project contains parts that are under the MIT License, originally written b
 MIT License
 
 Copyright (c) 2025 zakaria-effyis
+
+# UI-02 – Streamlit Interface: Fake ID Card Detection
+
+This user interface allows testing the authenticity prediction of an identity card using an autoencoder model, deployed in the `fastapi-02` API.
+
+## Features
+
+- Upload an identity card image
+- Send a request to the FastAPI backend (`/predict` route)
+- Display the result: anomaly score + verdict (REAL or FAKE card)
+
+## Run the Interface
+
+1. Activate your virtual environment:
+
+
+venv\Scripts\activate
+
+
+
+
+2. Install dependencies (if not already done):
+
+
+pip install -r requirements.txt
+
+
+3. Start the interface :
+
+
+streamlit run app.py
+
+
+4. The interface will open at :
+
+
+http://localhost:8501
+
+
+
+
+## Prerequisites
+
+- The fastapi-02 API must be running at http://localhost:8000
+- The model autoencoder_id.h5 must be accessible within the API project (via Google Drive)
