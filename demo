@@ -1,0 +1,16 @@
+Cette vidéo présente le fonctionnement complet de la deuxième fonctionnalité fastapi-02 du projet KYC_vLLM.
+Elle permet de vérifier l’authenticité d’une carte d’identité à l’aide d’un autoencodeur convolutionnel entraîné sur des vraies et fausses cartes.
+
+       Points démontrés :
+Chargement automatique du modèle autoencoder_id.h5 depuis Google Drive 
+
+Interface Swagger accessible via http://localhost:8000/docs
+
+Upload d'une carte d'identité au format image (.jpg)
+
+Calcul du score d’anomalie (Mean Squared Error)
+
+Retour d’un verdict clair : "Real" ou "Fake"
+
+       Lien vers la vidéo de démonstration :
+https://drive.google.com/file/d/1LbPQNPsHArx9AIq_wynyWU3CNN5wMK0O/view?usp=sharing
