@@ -1,0 +1,14 @@
+### Démonstration vidéo :
+Une démonstration vidéo du fonctionnement de l'API est disponible ici :
+
+https://drive.google.com/file/d/1MRAuJclEAhgQ7I4PimmSBPvhvw5dxjhA/view?usp=sharing
+
+Cette vidéo montre :
+
+Le lancement de l'API FastAPI (uvicorn)
+
+Le test de la route /verify_identity via Swagger UI
+
+La réponse retournée (vérification réussie ou non)
+
+Cette démo confirme que notre implémentation FastAPI est opérationnelle, stable et prête à être intégrée au reste de la plateforme.
