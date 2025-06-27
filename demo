@@ -1,0 +1,14 @@
+Cette vidéo montre le fonctionnement complet de l’interface utilisateur développée avec Streamlit, permettant de :
+
+Charger une image de carte d'identité
+
+L’envoyer à l’API fastapi-02 en local (localhost:8000/predict)
+
+Obtenir une prédiction visuelle claire indiquant si la carte est authentique ou fausse
+
+Afficher le score d’anomalie calculé par l’autoencodeur
+
+Cette démonstration valide l’intégration réussie entre le frontend (UI-02) et le backend FastAPI-02.
+
+Lien vers la vidéo: 
+https://drive.google.com/file/d/1Kj7h4XR907VvvFyvbrM4jCP04iJ3I1ux/view?usp=sharing
