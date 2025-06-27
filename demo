@@ -1,0 +1,17 @@
+Cette vidéo présente le fonctionnement de notre interface développée avec Streamlit dans la branche UI-01.
+
+Elle permet à l’utilisateur de :
+
+Uploader une carte d’identité (image)
+
+Uploader un selfie
+
+Lancer la vérification d’identité via le backend FastAPI
+
+Obtenir un résultat clair indiquant si les deux images correspondent
+
+Lien vers la démo vidéo :  https://drive.google.com/file/d/1fBzjTakxTB7dEp2Uqto67npf2OF6CIc5/view?usp=sharing
+
+
+L’interface utilise la route /verify_identity exposée par FastAPI (fastapi-01).
+Le frontend et le backend doivent être lancés localement en parallèle.
