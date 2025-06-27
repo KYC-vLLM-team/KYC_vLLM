@@ -52,26 +52,30 @@ MIT License
 
 Copyright (c) 2025 zakaria-effyis
 
-# Notebook - Identity Card Information Matching
+## fastapi-01 – Identity Verification API with DeepFace (ArcFace)
 
-This notebook implements a method to verify if the **user-entered identity information** matches the information **automatically extracted from an uploaded Moroccan ID card image**.
+This branch corresponds to **Feature 1** of the `KYC_vLLM` project:  
+Verify whether the face on the **identity card** matches the one in the provided **selfie**.
 
-## Functionality
+### Clone the repository and go to the folder:
 
-The notebook:
-- Uses **EasyOCR** to extract text from the uploaded ID card image.
-- Applies **regex rules** to detect and extract:
-  - **CIN** (National ID number)
-  - **Full name**
-  - **Date of birth**
-  - **Expiry date**
-- Compares these extracted fields with the **user-entered values**.
-- Outputs a **comparison table** indicating:
-  - `MATCH`  if the field matches.
-  - `MISMATCH` if there's a discrepancy.
+git clone https://github.com/zakaria-effyis/KYC_vLLM.git  
 
+cd KYC_vLLM  
+
+git checkout fastapi-01
+
+### Install dependencies:
+pip install -r requirements.txt
+### Run the API:
+uvicorn app.main:app --reload   
 
 
-## Notes
+### Swagger Interface
+Access: http://localhost:8000/docs  
 
-- Accuracy depends on image quality and OCR precision.
+
+Test the POST /verify_identity route.  
+
+
+This endpoint allows you to compare two images encoded in base64.
