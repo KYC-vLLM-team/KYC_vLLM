@@ -51,3 +51,35 @@ This project contains parts that are under the MIT License, originally written b
 MIT License
 
 Copyright (c) 2025 zakaria-effyis
+
+# fastapi-02 – Identity Card Authenticity Verification
+
+This module detects whether an **identity card is real or fake** using a trained **convolutional autoencoder**.
+
+## Run the API
+
+
+git clone https://github.com/zakaria-effyis/KYC_vLLM.git  
+
+cd KYC_vLLM/fastapi-02  
+
+
+python -m venv venv  
+
+source venv/bin/activate  # or venv\Scripts\activate on Windows  
+
+
+pip install -r requirements.txt  
+
+
+uvicorn main:app --reload    
+
+
+ Swagger interface: http://localhost:8000/docs    
+ 
+
+
+ Model   
+ 
+ 
+The file autoencoder_id.h5 is loaded from Google Drive at runtime (not included in GitHub).
